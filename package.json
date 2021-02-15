@@ -2,8 +2,14 @@
   "name": "website",
   "version": "1.0.0",
   "description": "code for robireton.com",
+  "type": "module",
+  "engines": {
+    "node": ">=13.2.0"
+  },
   "main": "lib/server.js",
   "scripts": {
+    "nodemon": "nodemon -r dotenv/config",
+    "start": "node -r dotenv/config lib/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,5 +25,17 @@
   "bugs": {
     "url": "https://github.com/robireton/website/issues"
   },
-  "homepage": "https://github.com/robireton/website#readme"
+  "homepage": "https://github.com/robireton/website#readme",
+  "dependencies": {
+    "@robireton/chrono": "^1.0.0",
+    "@robireton/environment": "^2.1.0",
+    "connect-sqlite3": "^0.9.11",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "passport": "^0.4.1",
+    "passport-trusted-header": "^1.1.0",
+    "serve-favicon": "^2.5.0"
+  }
 }

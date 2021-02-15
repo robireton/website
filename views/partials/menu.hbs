@@ -1,0 +1,7 @@
+<nav>
+<ul>
+{{#each menu}}
+  <li{{#if current}} class="current"{{/if}}><a href="{{../base_url}}{{href}}"{{#if title}} title="{{title}}"{{/if}}>{{text}}</a></li>
+{{/each}}
+</ul>
+</nav>

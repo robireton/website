@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{page_title}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{#each stylesheets}}
+  <link rel="stylesheet" type="text/css" href="{{../base_url}}/{{this}}">
+  {{/each}}
+  {{#each scripts}}
+  <script type="module" crossorigin="use-credentials" src="{{../base_url}}/{{this}}"></script>
+  {{/each}}
+</head>
+<body>
+  <header>
+    <div id="site-title">Rob Ireton</div>
+    {{> menu}}
+  </header>
+
+  <main role="main">
+    {{#if page_title}}
+      <header>
+        {{#if breadcrumbs}}{{{breadcrumbs}}}{{/if}}
+        <h1 class="title">{{page_title}}</h1>
+      </header>
+    {{/if}}
+
+    {{{body}}}
+  </main>
+
+  <footer>
+    <div>Rob Ireton</div>
+  </footer>
+</body>
+</html>
