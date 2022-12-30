@@ -9,25 +9,25 @@
   {{#each stylesheets}}
   <link rel="stylesheet" type="text/css" href="{{../base_url}}/{{this}}">
   {{/each}}
-  <script type="module" src="{{base_url}}/site-menu.js"></script>
-  <script type="module" src="{{base_url}}/site-message.js"></script>
+  {{#if messages}}<script type="module" src="{{base_url}}/site-message.js"></script>{{/if}}
   {{#each scripts}}
   <script type="module" src="{{../base_url}}/{{this}}"></script>
   {{/each}}
 </head>
-<body>
+<body{{#if pageid}} id="{{pageid}}"{{/if}}>
   <header>
-  <a href="https://robireton.com/">Rob Ireton</a>
-  {{> sitenav base_url=base_url}}
+  <a href="{{base_url}}/">{{sitename}}</a>
+  {{> menu entries=sitemenu}}
   </header>
 
   {{#if tabs}}{{> menu tabs}}{{/if}}
 
   <main role="main" id="main-content">
-    {{#if message}}<aside class="site-message"><span class="text">{{message}}</span><span class="actions"><input type="button" value="✖️" title="dismiss" name="dismiss"></span></aside>{{/if}}
+    {{#each messages}}
+    <aside class="site-message"><span class="text">{{this}}</span><span class="actions"><input type="button" value="✖️" title="dismiss" name="dismiss"></span></aside>
+    {{/each}}
     {{#if page_title}}
       <header>
-        {{#if breadcrumbs}}{{{breadcrumbs}}}{{/if}}
         <h1 class="title" id="page-title">{{page_title}}</h1>
       </header>
     {{/if}}
@@ -35,7 +35,7 @@
     {{{body}}}
   </main>
 
-  <footer>Rob Ireton</footer>
+  {{> footer}}
 
   <aside id="header-left"></aside>
   <aside id="header-right"></aside>

@@ -41,7 +41,7 @@ body > header {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 body > header > a:first-of-type {
@@ -51,51 +51,33 @@ body > header > a:first-of-type {
   cursor: pointer;
 }
 
-body > header > nav {
-  position: relative;
+body>header>nav {
+  display: block;
 }
 
-body > header > nav > ul {
-  position: absolute;
-  width: 188px;
-  right: -36px;
-  display: flex;
-  row-gap: 19.5px;
-  flex-direction: column;
+body>header>nav>ul {
+  font-weight: normal;
   list-style-type: none;
   list-style-image: none;
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  column-gap: 1rem;
   margin: 0;
-  padding: 16px 36px 72px 36px;
-  background-color: var(--black);
-  box-shadow: 0 9.75px 13px 2px var(--black);
+  padding: 0;
 }
 
-body > header > nav > ul > li {
+body>header>nav>ul>li {
   padding: 0;
   margin: 0;
 }
 
-body > header > nav > ul > li > a {
+body>header>nav>ul>li>a {
   color: var(--white);
 }
 
-body > header > nav > ul > li.active > a,
-body > header > nav > ul > li:hover > a {
-  color: var(--lightgrey);
-}
-
-body > header > nav > ul > li > span {
+body>header>nav>ul>li>span {
   cursor: default;
-}
-
-button.menuToggle {
-  margin: 0;
-  padding: 0;
-  background-color: var(--transparent);
-  border-radius: 0;
-  border: none;
-  cursor: pointer;
-  line-height: 0;
 }
 
 body > nav#tabs ul {
