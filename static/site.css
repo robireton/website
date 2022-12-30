@@ -46,8 +46,8 @@ body > header {
 
 body > header > a:first-of-type {
   display: block;
-  content: url("logo.svg");
-  height: 58px;
+  content: url("icon.svg");
+  height: 64px;
   cursor: pointer;
 }
 

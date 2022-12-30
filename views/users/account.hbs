@@ -3,13 +3,10 @@
 {{> users/profile profile=profile}}
 </section>
 
-{{#unless memberview}}
 <section id="metadata">
 {{> users/metadata meta=meta}}
 </section>
-{{/unless}}
 
-{{#if memberview}}
 <section id="actions">
 <form method="GET" action="{{base_url}}/logout" id="logout">
 <input type="submit" value="⬅️ logout">
@@ -23,6 +20,5 @@
 
 {{> users/linking actions=actions base_url=base_url}}
 </section>
-{{/if}}
 
 </article>
