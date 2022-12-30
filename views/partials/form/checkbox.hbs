@@ -1,0 +1,10 @@
+<div class="form-field form-checkbox"{{#if id}} id="{{id}}"{{/if}}>
+<label>{{label}}
+<input type="checkbox"
+{{#if id}}id="{{id}}-edit"{{/if}}
+{{#if name}}name="{{name}}"{{/if}}
+value="{{#if value}}{{value}}{{/if}}"
+{{#if checked}} checked{{/if}}>
+</label>
+{{#if help}}<span class="description">{{help}}</span>{{/if}}
+</div>

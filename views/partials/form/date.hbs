@@ -1,0 +1,20 @@
+<div class="form-field form-date"{{#if id}} id="{{id}}"{{/if}}>
+<label{{#if id}} for="{{id}}-edit"{{/if}}>{{label}}{{#if required}} <span class="required" title="This field is required.">*</span>{{/if}}</label>
+<div>
+<input type="date"
+{{#if id}}
+id="{{id}}-edit"
+{{/if}}
+{{#if name}}name="{{name}}"{{/if}}
+{{#if min}}min="{{min}}"{{/if}}
+{{#if max}}max="{{max}}"{{/if}}
+{{#if autocomplete}}autocomplete="{{autocomplete}}"{{/if}}
+{{#if autofocus}}autofocus{{/if}}
+{{#if disabled}}disabled{{/if}}
+{{#if readonly}}readonly{{/if}}
+{{#if required}}required{{/if}}
+value="{{#if value}}{{value}}{{/if}}"
+>
+{{#if help}}<span class="description">{{help}}</span>{{/if}}
+</div>
+</div>

@@ -1,0 +1,13 @@
+<fieldset id="{{module}}-documents" class="documents" data-endpoint="{{endpoint}}">
+<legend>Documents</legend>
+<ul class="files">
+{{#each files}}
+{{> document this}}
+{{/each}}
+</ul>
+<footer>
+<input type="file" value="Upload" id="{{module}}_file_upload" name="{{module}}_file_upload" accept=".pdf,.docx,.pptx,.xlsx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.openxmlformats-officedocument.presentationml.presentation,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,text/plain">
+<input type="button" value="Retrieve" id="{{module}}_file_retrieve">
+<input type="button" value="Delete" id="{{module}}_file_delete">
+</footer>
+</fieldset>

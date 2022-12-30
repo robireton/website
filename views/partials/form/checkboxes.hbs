@@ -1,0 +1,13 @@
+<div class="form-field form-checkboxes{{#if required}} required{{/if}}"{{#if id}} id="{{id}}"{{/if}}{{#if action}} data-action="{{action}}"{{/if}}>
+<label{{#if id}} for="{{id}}-list"{{/if}}>{{label}}{{#if required}} <span class="required" title="This field is required.">*</span>{{/if}}</label>
+<ul class="checkboxes"{{#if id}} id="{{id}}-list"{{/if}}>
+{{#each items}}
+<li class="checkbox">
+  <label{{#if readonly}} class="readonly"{{/if}}{{#if title}} title="{{title}}"{{/if}}>
+  <input type="checkbox" name="{{../name}}" value="{{value}}" autocomplete="off" {{#if checked}} checked{{/if}}> {{text}}
+  </label>
+</li>
+{{/each}}
+</ul>
+{{#if help}}<span class="description">{{help}}</span>{{/if}}
+</div>

@@ -1,0 +1,6 @@
+.user-search-widget {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+}

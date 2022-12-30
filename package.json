@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "@robireton/website",
   "version": "1.0.0",
   "description": "code for robireton.com",
   "type": "module",
@@ -27,15 +27,22 @@
   },
   "homepage": "https://github.com/robireton/website#readme",
   "dependencies": {
-    "@robireton/chrono": "^1.0.0",
-    "@robireton/environment": "^2.1.0",
-    "connect-sqlite3": "^0.9.11",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-handlebars": "^5.2.0",
-    "express-session": "^1.17.1",
-    "passport": "^0.4.1",
-    "passport-trusted-header": "^1.1.0",
-    "serve-favicon": "^2.5.0"
+    "@robireton/chrono": "^2.1.0",
+    "@robireton/environment": "^3.0.0",
+    "better-sqlite3": "^8.0.1",
+    "better-sqlite3-session-store": "^0.1.0",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "nodemailer": "^6.8.0",
+    "openid-client": "^5.3.1",
+    "passport": "^0.6.0",
+    "serve-favicon": "^2.5.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "dotenv": "latest",
+    "nodemon": "^2.0.20"
   }
 }

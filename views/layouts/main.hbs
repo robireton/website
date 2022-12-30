@@ -3,33 +3,41 @@
 <head>
   <meta charset="utf-8">
   <title>{{page_title}}</title>
+  <link rel="icon" href="{{base_url}}/favicon.ico" sizes="any">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{{base_url}}/site.css">
   {{#each stylesheets}}
   <link rel="stylesheet" type="text/css" href="{{../base_url}}/{{this}}">
   {{/each}}
+  <script type="module" src="{{base_url}}/site-menu.js"></script>
+  <script type="module" src="{{base_url}}/site-message.js"></script>
   {{#each scripts}}
-  <script type="module" crossorigin="use-credentials" src="{{../base_url}}/{{this}}"></script>
+  <script type="module" src="{{../base_url}}/{{this}}"></script>
   {{/each}}
 </head>
 <body>
   <header>
-    <div id="site-title">Rob Ireton</div>
-    {{> menu}}
+  <a href="https://robireton.com/">Rob Ireton</a>
+  {{> sitenav base_url=base_url}}
   </header>
 
-  <main role="main">
+  {{#if tabs}}{{> menu tabs}}{{/if}}
+
+  <main role="main" id="main-content">
+    {{#if message}}<aside class="site-message"><span class="text">{{message}}</span><span class="actions"><input type="button" value="✖️" title="dismiss" name="dismiss"></span></aside>{{/if}}
     {{#if page_title}}
       <header>
         {{#if breadcrumbs}}{{{breadcrumbs}}}{{/if}}
-        <h1 class="title">{{page_title}}</h1>
+        <h1 class="title" id="page-title">{{page_title}}</h1>
       </header>
     {{/if}}
 
     {{{body}}}
   </main>
 
-  <footer>
-    <div>Rob Ireton</div>
-  </footer>
+  <footer>Rob Ireton</footer>
+
+  <aside id="header-left"></aside>
+  <aside id="header-right"></aside>
 </body>
 </html>

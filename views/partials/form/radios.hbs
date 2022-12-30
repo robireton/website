@@ -1,0 +1,12 @@
+<div class="form-field form-radios{{#if required}} required{{/if}}"{{#if id}} id="{{id}}"{{/if}}{{#if action}} data-action="{{action}}"{{/if}}>
+<label{{#if id}} for="{{id}}-list"{{/if}}>{{label}}{{#if required}} <span class="required" title="This field is required.">*</span>{{/if}}</label>
+<ul class="radios"{{#if id}} id="{{id}}-list"{{/if}}>
+{{#each items}}
+<li class="radio">
+  <label{{#if readonly}} class="readonly"{{/if}}>
+  <input type="radio" name="{{../name}}" value="{{value}}"{{#if checked}} checked{{/if}} autocomplete="off"> {{text}}
+  </label>
+</li>
+{{/each}}
+</ul>
+</div>

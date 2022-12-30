@@ -1,0 +1,1 @@
+document.getElementById('main-content').querySelectorAll('aside.site-message input[name=dismiss]').forEach(input => input.addEventListener('click', event => event.target.closest('aside.site-message').remove(), { passive: true }))

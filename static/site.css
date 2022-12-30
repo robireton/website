@@ -1,0 +1,204 @@
+@import "page-layout.css";
+@import "typography.css";
+
+:root {
+  --black: #000000;
+  --purple: #80276C;
+  --palepurple: #BF93B5;
+  --red: #E00122;
+  --palered: #F7BFC7;
+  --darkgrey: #606164;
+  --lightgrey: #B1B3B6;
+  --palegrey: #F7F7F7;
+  --white: #FFFFFF;
+  --transparent: rgba(0,0,0,0);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--red);
+}
+
+.hidden {
+  display: none !important;
+}
+
+body > header {
+  background-color: var(--black);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body > header > a:first-of-type {
+  display: block;
+  content: url("logo.svg");
+  height: 58px;
+  cursor: pointer;
+}
+
+body > header > nav {
+  position: relative;
+}
+
+body > header > nav > ul {
+  position: absolute;
+  width: 188px;
+  right: -36px;
+  display: flex;
+  row-gap: 19.5px;
+  flex-direction: column;
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 16px 36px 72px 36px;
+  background-color: var(--black);
+  box-shadow: 0 9.75px 13px 2px var(--black);
+}
+
+body > header > nav > ul > li {
+  padding: 0;
+  margin: 0;
+}
+
+body > header > nav > ul > li > a {
+  color: var(--white);
+}
+
+body > header > nav > ul > li.active > a,
+body > header > nav > ul > li:hover > a {
+  color: var(--lightgrey);
+}
+
+body > header > nav > ul > li > span {
+  cursor: default;
+}
+
+button.menuToggle {
+  margin: 0;
+  padding: 0;
+  background-color: var(--transparent);
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+  line-height: 0;
+}
+
+body > nav#tabs ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  row-gap: 0.5rem;
+  align-items: stretch;
+  white-space: nowrap;
+}
+
+body > nav#tabs ul li > * {
+  display: block;
+  position: relative;
+  padding: 0.5rem 2rem 0.5rem 1.75rem;
+}
+
+body > nav#tabs ul li > span {
+  background-color: var(--palegrey);
+  color: var(--red)
+}
+
+body > nav#tabs ul li > span::before {
+  position: absolute;
+  content: "•";
+  left: 0.75rem;
+  color: var(--darkgrey)
+}
+
+body > aside#header-left {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+body > aside#header-right {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+main h1 {
+  margin: 1.5rem 0;
+}
+
+main h2 {
+  margin: 0 auto 0.5rem 0;
+}
+
+main h3 {
+  margin: 0.75rem 0;
+}
+
+main p {
+  margin: 1.25em 0;
+  padding: 0;
+}
+
+main li {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+main > .site-message {
+  background-color: var(--purple);
+  color: var(--palegrey);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > .site-message .actions {
+  opacity: 0.05;
+  transition-property: opacity;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+main > .site-message:hover .actions {
+  opacity: 0.88;
+}
+
+main section.error {
+  margin: 2.5rem 0;
+}
+
+main section.error code {
+  display: block;
+  padding: 1.25rem;
+  color: var(--black);
+  background-color: var(--palegrey);
+  border: 2px solid var(--red);
+}
+
+span.mdash {
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+}
+
+span.virgule {
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+}

@@ -1,0 +1,10 @@
+<div id="search-field-members" class="field">
+    <input type="search" id="user-search" name="person" value="" placeholder="name or email" data-action="{{action}}" size="48" spellcheck="false" autocomplete="off" autofocus>
+    <select id="user-options" size="8" class="hidden">
+        {{#if initial}}
+        <option value="{{initial.value}}">{{initial.text}}</option>
+        {{/if}}
+    </select>
+</div>
+
+<article id="site-user"></article>

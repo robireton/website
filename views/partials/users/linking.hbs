@@ -1,0 +1,14 @@
+{{#with actions}}
+{{#if orcid.link}}
+<form method="GET" action="{{../base_url}}/login/orcid">
+<input type="submit" value="➡️ link your ORCiD account">
+</form>
+{{/if}}
+
+{{#if orcid.unlink}}
+<form class="unlink" method="POST" action="{{../base_url}}/unlink">
+<input type="hidden" name="source" value="orcid">
+<input type="submit" value="❌ unlink your ORCiD account">
+</form>
+{{/if}}
+{{/with}}

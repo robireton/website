@@ -1,0 +1,79 @@
+<form enctype="application/x-www-form-urlencoded" action="{{action}}" method="post" id="users-profile-form" class="users">
+{{#if link}}
+<div id="link-userss-action"><p>Already a user? <a tabindex="1" href="{{link}}">Link to your exiting User Account.</a></p></div>
+{{/if}}
+
+<fieldset><legend>Contact</legend>
+
+<label for="name-subfields" class="field-name">Name</label>
+<div id="name-subfields" class="field-name subfields">
+  <div id="field-prefix"><label for="honorific-prefix">Prefix</label> <input tabindex="2" id="honorific-prefix" name="honorific-prefix" autocomplete="honorific-prefix" type="text" value="{{name.prefix}}" size="4"></div>
+  <div id="field-given"><label for="given-name" class="required">Given</label> <input tabindex="3" id="given-name" name="given-name" autocomplete="given-name" type="text" value="{{name.given}}" size="14" required></div>
+  <div id="field-additional"><label for="additional-name">Additional</label> <input tabindex="4" id="additional-name" name="additional-name" autocomplete="additional-name" type="text" value="{{name.additional}}" size="14"></div>
+  <div id="field-family"><label for="family-name" class="required">Family</label> <input tabindex="5" id="family-name" name="family-name" autocomplete="family-name" type="text" value="{{name.family}}" size="22" required></div>
+  <div id="field-suffix"><label for="honorific-suffix">Suffix</label> <input tabindex="6" id="honorific-suffix" name="honorific-suffix" autocomplete="honorific-suffix" type="text" value="{{name.suffix}}" size="4"></div>
+</div>
+
+<label for="nickname" class="field-nickname">Preferred<span class="virgule">/</span>Nickname</label>
+<div class="field-nickname">
+  <input tabindex="7" id="nickname" name="nickname" autocomplete="nickname" type="text" value="{{name.nickname}}" size="14">
+</div>
+
+<label for="fullname" class="field-fullname">Full<span class="virgule">/</span>Display Name</label>
+<div class="field-fullname">
+  <input tabindex="9" id="fullname" name="fullname" autocomplete="name" type="text" value="{{name.full}}" size="30">
+  <ul class="radios">
+    <li><label><input tabindex="8" type="radio" name="full-name-option" id="auto-full-name" value="auto"{{#unless name.custom}} checked{{/unless}} autocomplete="off"> Auto</label></li>
+    <li><label><input tabindex="8" type="radio" name="full-name-option" id="custom-full-name" value="custom"{{#if name.custom}} checked{{/if}} autocomplete="off"> Custom</label></li>
+  </ul>
+</div>
+
+<label for="field-pronouns" class="field-pronouns">Pronouns</label>
+<div id="field-pronouns">
+  <div class="description">If we need to refer to you in the third person, which pronouns would you prefer?</div>
+  <table>
+    <thead><th></th><th style="text-align:left;font-size:smaller;font-weight:normal;font-variant-caps:all-small-caps;color:var(--darkgrey);">subjective</th><th style="text-align:left;font-size:smaller;font-weight:normal;font-variant-caps:all-small-caps;color:var(--darkgrey);">objective</th><th style="text-align:left;font-size:smaller;font-weight:normal;font-variant-caps:all-small-caps;color:var(--darkgrey);">possessive</th></thead>
+    <tbody>
+      {{#with pronouns}}
+      <tr><td><input tabindex="10" type="radio" name="pronouns" id="pronouns-neutral" value="neutral" autocomplete="off"{{#if neutral}} checked{{/if}}></td><td><label for="pronouns-neutral">they</label></td><td><label for="pronouns-neutral">them</label></td><td><label for="pronouns-neutral">theirs</label></td></tr>
+      <tr><td><input tabindex="10" type="radio" name="pronouns" id="pronouns-feminine" value="feminine" autocomplete="off"{{#if feminine}} checked{{/if}}></td><td><label for="pronouns-feminine">she</label></td><td><label for="pronouns-feminine">her</label></td><td><label for="pronouns-feminine">hers</label></td></tr>
+      <tr><td><input tabindex="10" type="radio" name="pronouns" id="pronouns-masculine" value="masculine" autocomplete="off"{{#if masculine}} checked{{/if}}></td><td><label for="pronouns-masculine">he</label></td><td><label for="pronouns-masculine">him</label></td><td><label for="pronouns-masculine">his</label></td></tr>
+      <tr><td><input tabindex="10" type="radio" name="pronouns" id="pronouns-other" value="other" autocomplete="off"{{#if other}} checked{{/if}}></td><td><input tabindex="-1" type="text" name="subjective" size="4" maxlength="8" value="{{subjective}}" autocomplete="off"></td><td><input tabindex="-1" type="text" name="objective" size="4" maxlength="8" value="{{objective}}" autocomplete="off"></td><td><input tabindex="-1" type="text" name="possessive" size="4" maxlength="8" value="{{possessive}}" autocomplete="off"></td></tr>
+      {{/with}}
+    </tbody>
+  </table>
+</div>
+
+{{#if emails}}
+<label for="emails-table" class="field-emails required">Email</label>
+<div id="emails-table" class="field-emails">
+  <table>
+    <thead><tr><th>address</th><th>primary</th><th>verified</th></tr></thead>
+    <tbody>
+      {{#each emails}}<tr{{#if readonly}} class="readonly"{{/if}}>
+      <td>{{#if readonly}}
+        <input type="hidden" name="emailaddress{{@index}}" value="{{address}}"><span title="this address is provided by an authentication provider">{{address}}</span>
+        {{else}}
+        <input tabindex="15" id="emailaddress{{@index}}" name="emailaddress{{@index}}" type="email" value="{{address}}" autocomplete="email" size="30">
+        {{/if}}</td>
+      <td><input tabindex="15" type="radio" name="primary" value="emailaddress{{@index}}"{{#if primary}} checked{{/if}}></td>
+      <td>{{#if verified}}⭐️{{else}}<!--input tabindex="15" type="button" value="verify"-->{{/if}}</td>
+      </tr>{{/each}}
+      <tr><td><input tabindex="16" id="emailaddress-new" name="newemail" type="email" value="" autocomplete="email" size="30" placeholder="add an email address"></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+{{else}}
+<label for="new-email" class="field-email required">Email</label>
+<div class="field-email">
+  <input tabindex="16" id="new-email" name="newemail" type="email" value="" autocomplete="email" size="30" required>
+</div>
+{{/if}}
+
+</fieldset>
+
+<div class="actions">
+  <input tabindex="36" type="submit" value="{{submit}}">
+  {{#if user}}<input type="hidden" name="user" value="{{user}}">{{/if}}
+</div>
+</form>

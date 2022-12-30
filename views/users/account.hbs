@@ -1,0 +1,28 @@
+<article id="site-user">
+<section id="user-profile">
+{{> users/profile profile=profile}}
+</section>
+
+{{#unless memberview}}
+<section id="metadata">
+{{> users/metadata meta=meta}}
+</section>
+{{/unless}}
+
+{{#if memberview}}
+<section id="actions">
+<form method="GET" action="{{base_url}}/logout" id="logout">
+<input type="submit" value="⬅️ logout">
+</form>
+
+{{#if admin}}
+<form method="GET" action="{{base_url}}/users/search" id="search">
+<input type="submit" value="🔍 user search">
+</form>
+{{/if}}
+
+{{> users/linking actions=actions base_url=base_url}}
+</section>
+{{/if}}
+
+</article>

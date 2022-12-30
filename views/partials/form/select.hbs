@@ -1,0 +1,8 @@
+<div class="form-field form-select{{#if required}} required{{/if}}"{{#if id}} id="{{id}}"{{/if}}{{#if action}} data-action="{{action}}"{{/if}}>
+<label{{#if id}} for="{{id}}-select"{{/if}}>{{label}}{{#if required}} <span class="required" title="This field is required.">*</span>{{/if}}</label>
+<select name="{{name}}"{{#if id}} id="{{id}}-select"{{/if}} autocomplete="off">
+{{#each items}}
+<option value="{{value}}"{{#if selected}} selected{{/if}}>{{text}}</option>
+{{/each}}
+</select>
+</div>

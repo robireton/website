@@ -1,0 +1,10 @@
+<div class="form-field form-radios"{{#if id}} id="{{id}}"{{/if}}>
+<label{{#if id}} for="{{id}}-options"{{/if}}>{{label}}</label>
+<div>
+<ul class="radios"{{#if id}} id="{{id}}-options"{{/if}}>
+<li class="radio"><label><input type="radio" name="{{name}}" value="yes"{{#if checked}} checked{{/if}}> Yes</label></li>
+<li class="radio"><label><input type="radio" name="{{name}}" value="no"{{#unless checked}} checked{{/unless}}> No</label></li>
+</ul>
+{{#if help}}<span class="description">{{help}}</span>{{/if}}
+</div>
+</div>

@@ -1,0 +1,13 @@
+{{#if join}}
+<p>Authenticate with one of these to create an account:</p>
+{{else}}
+<p>Authenticate with one of these to access your user account:</p>
+{{/if}}
+
+<section id="login-options">
+{{#if option.orcid}}
+<div id="login-orcid">
+<a href="{{urls.orcid}}" title="Login with ORCID"><img class="logo" width="415" height="142" src="{{base_url}}/orcid.logo.svg" alt="ORCiD"></a>
+</div>
+{{/if}}
+</section>

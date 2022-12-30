@@ -1,0 +1,31 @@
+<div class="form-field form-text"{{#if id}} id="{{id}}"{{/if}}{{#if action}} data-action="{{action}}"{{/if}}>
+<label{{#if id}} for="{{id}}-edit"{{/if}}>{{label}}{{#if required}} <span class="required" title="This field is required.">*</span>{{/if}}</label>
+<div>
+<input type="text"
+{{#if id}}
+id="{{id}}-edit"
+{{#if suggestions}}list="{{id}}-suggestions"{{/if}}
+{{/if}}
+{{#if name}}name="{{name}}"{{/if}}
+{{#if size}}size="{{size}}"{{/if}}
+{{#if maxlength}}maxlength="{{maxlength}}"{{/if}}
+{{#if placeholder}}placeholder="{{placeholder}}"{{/if}}
+{{#if pattern}}pattern="{{pattern}}"{{/if}}
+{{#if spellcheck}}spellcheck="{{spellcheck}}"{{/if}}
+{{#if autocomplete}}autocomplete="{{autocomplete}}"{{/if}}
+{{#if autofocus}}autofocus{{/if}}
+{{#if disabled}}disabled{{/if}}
+{{#if readonly}}readonly{{/if}}
+{{#if required}}required{{/if}}
+value="{{#if value}}{{value}}{{/if}}"
+>
+{{#if help}}<span class="description">{{help}}</span>{{/if}}
+{{#if suggestions}}
+<datalist {{#if id}}id="{{id}}-suggestions"{{/if}}>
+{{#each suggestions}}
+<option value="{{.}}">
+{{/each}}
+</datalist>
+{{/if}}
+</div>
+</div>

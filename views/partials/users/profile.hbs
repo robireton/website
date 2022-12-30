@@ -1,0 +1,9 @@
+{{#with profile}}
+<table class="user-profile">
+<caption><div><span>User Profile</span>{{#if edit}} <span><a href="{{edit}}" title="edit user profile">🖋️ edit</a></span>{{/if}}</div></caption>
+<tbody>
+{{#if name.full}}<tr><th>Name</th><td>{{name.full}} <em>(<span>{{name.subjective}}</span>/<span>{{name.objective}}</span>)</em></td></tr>{{/if}}
+{{#if emails}}<tr><th>Email</th><td><ul class="emails">{{#each emails}}<li>{{address}}{{#if primary}}<span title="primary address">🥇</span>{{/if}}{{#if verified}}<span title="verified address">⭐️</span>{{/if}}</li>{{/each}}</ul></td></tr>{{/if}}
+</tbody>
+</table>
+{{/with}}

@@ -1,0 +1,18 @@
+<table class="user-profile">
+<caption>User Metadata</caption>
+<tbody>
+{{#with meta}}
+<tr id="meta-id"><th>id</th><td>{{id}}</td></tr>
+<tr id="meta-status" class="editable"><th>status</th><td data-value="{{disabled.value}}" data-patch="{{disabled.patch}}">{{#if disabled.value}}❌ <span class="keyword">disabled</span> (<time datetime="{{disabled.datetime}}">{{disabled.display}}</time>){{else}}✅ <span class="keyword">active</span>{{/if}}</td></tr>
+<tr><th>user since</th><td><time datetime="{{created.datetime}}">{{created.display}}</time></td></tr>
+<tr><th>last login</th><td><time datetime="{{last.login.datetime}}">{{last.login.display}}</time></td></tr>
+<tr><th>last access</th><td><time datetime="{{last.access.datetime}}">{{last.access.display}}</time></td></tr>
+<tr><th>last IP</th><td>{{last.ip}}</td></tr>
+<tr id="meta-ua"><th>last UA</th><td>{{last.ua}}</td></tr>
+<tr id="meta-roles" class="editable"><th>roles</th><td data-value="{{roles.map}}" data-patch="{{roles.patch}}"><ul>{{#each roles.list}}<li>{{.}}{{/each}}</ul></td></tr>
+<tr><th>accounts</th><td><ul>
+{{#if accounts.orcid}}<li><span class="keyword">orcid</span> · <span class="data">{{accounts.orcid.id}}</span>{{/if}}
+</ul></td></tr>
+{{/with}}
+</tbody>
+</table>

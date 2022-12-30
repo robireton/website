@@ -3,16 +3,14 @@ Description=Website
 After=network.target
 
 [Service]
-User=www-data
-Group=www-data
-WorkingDirectory=/srv/website
+User=user
+Group=group
 EnvironmentFile=/etc/website.env
+WorkingDirectory=/srv/website
 ExecStart=/usr/bin/node lib/server.js
 Restart=always
 RestartSec=500ms
 StartLimitInterval=0
-StandardOutput=syslog
-StandardError=syslog
 SyslogIdentifier=website
 
 [Install]

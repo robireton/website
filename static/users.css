@@ -1,0 +1,442 @@
+
+.keyword {
+  font-variant-caps: small-caps;
+}
+
+.data {
+  font-family: monospace;
+  font-size: smaller;
+}
+
+.field {
+  margin-bottom: 1.5rem;
+}
+
+label.required::after {
+  content: ' *';
+  color: var(--red);
+}
+
+label.readonly {
+  color: var(--purple)
+}
+
+label.disabled {
+  color: var(--lightgrey);
+}
+
+#search-field-members {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+}
+
+section#login-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 4rem;
+  margin-bottom: 16rem;
+}
+
+section#login-options #login-orcid {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+section#login-options div a {
+  display:block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+section#login-options #login-orcid a {
+  padding: 0 2rem;
+}
+
+section#login-options img.logo {
+  max-width: 100%;
+  height: 5em;
+  cursor: pointer;
+}
+
+section#login-options aside#help-ahc p:first-child::before {
+  content: '💁';
+  font-size: 40px;
+  line-height: 40px;
+  display: block;
+  float: left;
+  padding-right: 0.5rem;
+}
+
+section#login-options aside.help p {
+  color: var(--lightgrey);
+  transition-property: color;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+}
+
+section#login-options aside.help p a {
+  color: var(--lightgrey);
+  transition-property: color;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+}
+
+section#login-options aside.help:hover p {
+  color: var(--darkgrey);
+}
+
+section#login-options aside.help:hover p a {
+  color: var(--red);
+}
+
+form.login {
+  width: 27rem;
+}
+
+form.login .field {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 0.75rem;
+}
+
+form.login .field label {
+  color: var(--lightgrey);
+  font-weight: bold;
+  font-variant-caps: all-small-caps;
+  font-size: smaller;
+  padding-left: 0.25rem;
+}
+
+form.login .actions {
+  padding-left: 0.25rem;
+}
+
+article#site-user {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+table.user-profile {
+  border-collapse: collapse;
+  max-width: 40rem;
+}
+
+table.user-profile caption {
+  text-align: left;
+  padding: 0.25rem 0.5rem;
+}
+
+table.user-profile caption > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+table.user-profile caption a {
+  font-weight: normal;
+  font-size: 1rem;
+  font-variant-caps: all-small-caps;
+  color: var(--darkgrey);  
+}
+
+table.user-profile caption a:hover {
+  color: var(--black);
+}
+
+table.user-profile tbody th {
+  text-align: left;
+  vertical-align: top;
+  border: 0.5px solid var(--darkgrey);
+  padding: 0.25rem 0.5rem;
+  width: 10rem;
+}
+
+table.user-profile tbody td {
+  text-align: left;
+  vertical-align: top;
+  border: 0.5px solid var(--darkgrey);
+  padding: 0.25rem 0.5rem;
+}
+
+
+table.user-profile tbody td ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+table.user-profile tbody td ul li {
+  margin: 0 0 0.25em 0;
+  padding: 0;
+}
+
+table.user-profile tbody tr#meta-id td {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  vertical-align: bottom;
+}
+
+table.user-profile tbody tr#meta-ua td {
+  font-size: 0.8rem;
+}
+
+table.user-profile tbody tr.editable td {
+  position: relative;
+}
+
+table.user-profile tbody tr.editable:hover td {
+  color: var(--black);
+  cursor: pointer;
+}
+
+table.user-profile tbody tr.editable:hover td::after {
+  content: '🖋️';
+  opacity: 0.5;
+  display: block;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+}
+
+table.user-profile tbody tr.editable td.editing::after {
+  content: '🖋️';
+  opacity: 1;
+  display: block;
+  position: absolute;
+  top: 0.25rem;
+  right: 0.5rem;
+}
+
+table.user-profile tbody tr#meta-roles td.editing {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.25rem;
+}
+
+table.user-profile tbody tr#meta-roles td.editing > *:last-child {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-top: 0.5rem;
+}
+
+table.user-profile ul.emails {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+table.user-profile ul.emails li {
+  white-space: nowrap;
+}
+
+table.user-profile ul.emails li span {
+  padding-left: 0.25em;
+  cursor: help;
+}
+
+table.user-profile td em {
+  font-size: smaller;
+  font-style: normal;
+  color: var(--lightgrey);
+  padding-left: 0.5rem;
+}
+
+table.user-profile td em span{
+  padding-left: 0.125em;
+  padding-right: 0.125em;
+}
+
+section#actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+section#actions > *:first-child {
+  flex-basis: 4rem;
+}
+
+section#actions input[type=submit] {
+  /* -webkit-appearance: button; */
+  padding: 0.25rem 0.5rem;
+}
+
+section#actions aside.help {
+  max-width: 14rem;
+  padding-left: 0.5rem;
+  color: var(--lightgrey);
+}
+
+section#actions aside.help p:first-child::before {
+  content: '💁';
+  font-size: 40px;
+  line-height: 40px;
+  display: block;
+  float: left;
+  padding-right: 0.5rem;
+}
+
+form#users-profile-form .description {
+  color: var(--lightgrey);
+  font-style: italic;
+  font-size: smaller;
+  padding: 0.25rem 0 0 0.25rem;
+}
+
+form#users-profile-form fieldset {
+  display: grid;
+  grid-template-columns: 11rem 30rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+
+form#users-profile-form .radios {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+form#users-profile-form .radios li {
+  list-style-type: none;
+  margin: 0;
+}
+
+form#users-profile-form .checkboxes {
+  margin: 0;
+  padding: 0;
+}
+
+form#users-profile-form .checkboxes li {
+  list-style-type: none;
+  margin-top: 0;
+}
+
+form#users-profile-form .checkboxes li.readonly span.checkbox {
+  font-size: smaller;
+}
+
+form#users-profile-form .subfields {
+  display: inline-flex;
+  flex-direction: row;
+  column-gap: 0.75rem;
+}
+
+form#users-profile-form .subfields > * {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+form#users-profile-form .subfields > * > label {
+  font-size: smaller;
+  font-weight: normal;
+  font-variant-caps: all-small-caps;
+  color: var(--darkgrey);
+  padding-left: 0.25rem;
+}
+
+form#users-profile-form #field-prefix {
+  width: 3rem;
+}
+form#users-profile-form #field-given {
+  width: 6rem;
+}
+form#users-profile-form #field-additional {
+  width: 5rem;
+}
+form#users-profile-form #field-family {
+  width: 9rem;
+}
+form#users-profile-form #field-suffix {
+  width: 3rem;
+}
+
+form#users-profile-form .field-emails {
+  padding-top: 1.5rem;
+  position: relative;
+}
+
+form#users-profile-form .field-emails table {
+  position: relative;
+  top: -1.5rem;
+  margin-bottom: -1.5rem;
+}
+
+form#users-profile-form .field-emails table thead th {
+  font-size: smaller;
+  font-weight: normal;
+  font-variant-caps: all-small-caps;
+  color: var(--darkgrey);
+  padding-left: 0.25rem;
+  text-align: left;
+}
+
+form#users-profile-form .field-emails tr.readonly span {
+  padding-left: 0.25rem;
+  font-size: smaller;
+  font-style: normal;
+  font-weight: 400;
+}
+
+form#users-profile-form .field-emails input[name=primary]:checked::after {
+  content: '🥇';
+  padding-left: 1.5em;
+}
+
+form#users-profile-form #field-pronouns .description {
+  padding: 0;
+}
+
+form#users-profile-form #field-pronouns table {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+ul.tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5rem;
+  border: 1px solid var(--lightgrey);
+  width: 19.6rem;
+}
+
+ul.tags li {
+  margin: 0.25rem;
+  padding: 0.5rem .75rem 0.25rem 0;
+  border-radius: 0.25rem;
+  font-size: 12px;
+  background-color: var(--purple);
+  color: var(--lightgrey);
+  font-weight: bold;
+  cursor: default;
+}
+
+ul.tags li span.remove {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+ul.tags li span.remove:hover {
+  color: var(--white);
+}
+
+#users-email-form {
+  width: 23rem;
+}
+
+#users-email-form p {
+  color: var(--darkgrey);
+  padding-left: 0.25rem;
+}

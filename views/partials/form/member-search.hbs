@@ -1,0 +1,19 @@
+<div class="user-search-widget"
+{{#if id}}id="{{id}}"{{/if}}
+{{#if search}}data-search="{{search}}"{{/if}}
+{{#if select}}data-select="{{select}}"{{/if}}
+>
+  <input type="search" spellcheck="false" autocomplete="off"
+  size="{{#if size}}{{size}}{{else}}48{{/if}}"
+  value="{{#if input.search.value}}{{input.search.value}}{{/if}}"
+  placeholder="{{#if placeholder}}{{placeholder}}{{else}}search users by name or email{{/if}}"
+  {{#if autofocus}}autofocus{{/if}}
+  >
+  <select size="8" class="hidden">
+  {{#if option}}<option value="{{option.value}}">{{option.text}}</option>{{/if}}
+  </select>
+  <input type="hidden"
+  value="{{#if input.hidden.value}}{{input.hidden.value}}{{/if}}"
+  {{#if input.hidden.name}}name="{{input.hidden.name}}"{{/if}}
+  >
+</div>

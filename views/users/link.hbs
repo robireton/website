@@ -1,0 +1,9 @@
+{{#if action}}
+<form enctype="application/x-www-form-urlencoded" action="{{action}}" method="post" id="users-link-form" class="users login">
+<p>This will send a single-use access link to the email address associated with your user account. Once you receive the email and follow the link to gain access to the site. The link will expire after a resonable amount of time. Using a link will invalidate any other links.</p>
+<div class="field"><label for="username">username</label> <input type="text" name="username" id="username" autocomplete="username"></div>
+<div class="actions"><input type="submit" value="Send Link"></div>
+</form>
+{{else}}
+<p>Once you receive the email, follow the link to gain access to your user account. The link will expire after a resonable amount of time. Using a link will invalidate any other links.</p>
+{{/if}}

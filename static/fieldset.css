@@ -1,0 +1,33 @@
+fieldset.collapsible.expanded {
+  padding-top: initial;
+  padding-bottom: initial;
+}
+
+fieldset.collapsible.collapsed {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+fieldset.collapsible > legend {
+  cursor: pointer;
+}
+
+fieldset.collapsible.expanded > legend::before {
+  display: inline-block;
+  width: 1.5em;
+  content: '🔽';
+}
+
+fieldset.collapsible.collapsed > legend::before {
+  display: inline-block;
+  width: 1.5em;
+  content: '▶️';
+}
+
+fieldset.collapsible.collapsed > * {
+  display: none;
+}
+
+fieldset.collapsible.collapsed > legend {
+  display: initial;
+}
