@@ -1,0 +1,48 @@
+#sunflower {
+    display: block;
+    margin: 0;
+    padding: 0 0 2em 0;
+    text-align: center;
+    position: relative;
+    background-image: url('./3953239497_4f944903c3_o.jpg');
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover;
+}
+
+#sunflower canvas {
+    margin: 2em auto 0 auto;
+}
+
+#sunflower #controlStep {
+    text-align: center;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+#sunflower .buttons {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin: 1em auto;
+    width: 62%;
+}
+
+#sunflower .buttons img {
+    padding: 0 6px;
+    border: 1px solid rgba(0, 0, 0, 0.38);
+    border-radius: 6px;
+    -moz-transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+    -webkit-transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+    transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+}
+
+#sunflower .buttons img:hover {
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 6px;
+    box-shadow: 0 0 5px #93B778;
+    -moz-transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+    -webkit-transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+    transition: border 0.33s ease-out, box-shadow 0.33s ease-out;
+}

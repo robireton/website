@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg id="svg1307" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="48px" width="48px" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<defs id="defs1309">
+<linearGradient id="linearGradient2306" y2="95" gradientUnits="userSpaceOnUse" x2="70.827" gradientTransform="translate(-45.00042,-71.09425)" y1="124.12" x1="71.289">
+<stop id="stop5077" stop-color="#adb0a8" offset="0"/>
+<stop id="stop5079" stop-color="#464744" offset="1"/>
+</linearGradient>
+<radialGradient id="radialGradient2314" gradientUnits="userSpaceOnUse" cy="83.991" cx="107.59" gradientTransform="matrix(5.324342e-2,-0.836238,2.019473,0.128568,-151.9195,108.0768)" r="12.552">
+<stop id="stop2693" stop-color="#FFF" offset="0"/>
+<stop id="stop2695" stop-color="#d3d7cf" offset="1"/>
+</radialGradient>
+<linearGradient id="linearGradient2690" y2="88.924" gradientUnits="userSpaceOnUse" x2="70.952" gradientTransform="matrix(1.128181,0,0,1.128181,-53.99314,-83.36009)" y1="101.74" x1="70.914">
+<stop id="stop2686" stop-color="#FFF" offset="0"/>
+<stop id="stop2688" stop-color="#000" offset="1"/>
+</linearGradient>
+</defs>
+<metadata id="metadata1312">
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+<dc:creator>
+<cc:Agent>
+<dc:title>Lapo Calamandrei</dc:title>
+</cc:Agent>
+</dc:creator>
+<cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+<dc:subject>
+<rdf:Bag>
+<rdf:li>play</rdf:li>
+<rdf:li>media</rdf:li>
+<rdf:li>music</rdf:li>
+<rdf:li>video</rdf:li>
+<rdf:li>player</rdf:li>
+</rdf:Bag>
+</dc:subject>
+<dc:contributor>
+<cc:Agent>
+<dc:title>Jakub Steiner</dc:title>
+</cc:Agent>
+</dc:contributor>
+</cc:Work>
+<cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+<cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+<cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+</cc:License>
+</rdf:RDF>
+</metadata>
+<g id="layer1">
+<path id="path2682" stroke-linejoin="round" opacity="0.15" style="marker-end:none;color:#000000;marker-start:none;marker-mid:none;" fill="none" stroke-dashoffset="0" stroke="url(#linearGradient2690)" stroke-linecap="square" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.99999833" d="M12,39.5v-30.5l26.07,14.817-26.07,15.683z"/>
+<path id="path3375" style="marker-end:none;color:#000000;marker-start:none;marker-mid:none;" fill-rule="evenodd" fill="url(#radialGradient2314)" d="M12.499,37.811v-27.811l24.104,13.906-24.104,13.905z"/>
+<path id="path2479" stroke-linejoin="round" style="marker-end:none;color:#000000;marker-start:none;marker-mid:none;" fill="none" stroke-dashoffset="0" stroke="url(#linearGradient2306)" stroke-linecap="square" stroke-miterlimit="4" stroke-dasharray="none" stroke-width="1.00000036" d="M12.499,37.811v-27.811l24.104,13.906-24.104,13.905z"/>
+<path id="path2481" style="marker-end:none;color:#000000;marker-start:none;marker-mid:none;" fill-rule="evenodd" fill="#FFF" d="M12.999,10.874v26.063l22.594-13.031-22.594-13.032zm1,1.75l19.563,11.282-19.563,11.281v-22.563z"/>
+<path id="path2339" opacity="0.5" style="marker-end:none;color:#000000;marker-start:none;marker-mid:none;" fill-rule="nonzero" display="block" fill="#FFF" d="M13.938,12.562v11.688c4.269-0.045,9.164-0.346,17.062-1.875l-17.062-9.813z"/>
+</g>
+</svg>
